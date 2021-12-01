@@ -46,6 +46,11 @@ I also personally use the VS Code Jest extension, which requires setting the
 it to use `npm test` and include our custom settings! This also lets you debug
 your tests in VS Code, which can be really nice for figuring out what's wrong!
 
+To make auto-complete work better in `.test.js` files, I added `@types/jest` as
+a dev dependency in `package.json`. This tells VS Code to expect `test` and
+`describe` and such to exist as global functions, instead of trying to
+auto-complete them as weird stuff from the JS standard library 😳
+
 I'm also running a Prettier extension, to auto-format the code every time I
 save. Not a big deal, just cozy for me!
 
