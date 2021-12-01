@@ -1,0 +1,17 @@
+{
+  "name": "matchu-advent-of-code-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest"
+  },
+  "keywords": [],
+  "author": "Matchu",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jest": "^27.3.1"
+  },
+  "type": "module"
+}

@@ -1,0 +1,4 @@
+{
+  "jest.jestCommandLine": "npm test --",
+  "editor.rulers": [80]
+}
