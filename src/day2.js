@@ -1,4 +1,4 @@
-import fs from "node:fs/promises";
+import { readLinesFromFile } from "./util";
 
 export function followSubmarinePathV1(path) {
   let horizontalPosition = 0;
@@ -43,8 +43,7 @@ function parseSubmarineLine(line) {
 }
 
 export async function readSubmarinePathFile(filePath) {
-  const content = await fs.readFile(filePath, "utf8");
-  const lines = content.split("\n");
+  const lines = await readLinesFromFile(filePath);
   const submarinePath = lines.map((line) => parseSubmarineLine(line));
   return submarinePath;
 }

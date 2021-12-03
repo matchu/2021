@@ -1,4 +1,4 @@
-import fs from "node:fs/promises";
+import { readLinesFromFile } from "./util";
 
 export function countDepthIncreases(depths) {
   let numIncreases = 0;
@@ -19,8 +19,7 @@ export function computeDepthSumWindows(depths) {
 }
 
 export async function readDepthsFile(path) {
-  const content = await fs.readFile(path, "utf8");
-  const depthTexts = content.split("\n");
+  const depthTexts = await readLinesFromFile(path);
   const depths = depthTexts.map((text) => parseInt(text));
   return depths;
 }
